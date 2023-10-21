@@ -1,0 +1,329 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x:hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #17181a;
+    font-family: 'Montserrat',sans-serif;
+    overflow-x: hidden;
+    color: white;
+    position: relative;
+}
+p{
+    font-size: 1rem;
+}
+h1{
+    font-size: 1.68rem;
+}
+h2{
+    font-size: 3.36rem;
+}
+h3{
+    font-size: 5.04rem;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+button{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+}
+
+header{
+    border-bottom: 1px solid white;
+    min-height: 10vh;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin:auto;
+    /*  */
+    margin-top: 2rem;
+    position: relative;
+    z-index: 99;
+}
+.icon {
+    flex: 2 1 20rem;
+    font-family: 'Abril Fatface';
+}
+
+.header-list{
+    flex: 1 1 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-list h1{
+    font-family: 'Abril Fatface';
+}
+.header-list li{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-list li i {
+    padding: 0.5rem;
+}
+
+.fix-scroll-text{
+    font-size: 9vw;
+    font-weight: 400;
+    position: fixed;
+    color: white;
+    font-family: 'Abril Fatface';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.scroll-section{
+    height: 500vh;
+    position: relative;
+    width: 100vw;
+}
+.scroll-section p{
+    font-size: 5vw;
+    
+}
+.scroll-section p:nth-child(1){
+    position: absolute;
+    left:60%;
+    top: 25%;
+    transform: translate(-50%,-50%);
+}
+.scroll-section p:nth-child(2){
+    position: absolute;
+    left:30%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+    transform: scale(-1, 1);
+}
+
+/* about us */
+.about-us-section{
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.5s ease;
+}
+.about-us-section> .about{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height: 70vh;
+}
+
+.about-us-section div.text {
+    flex: 1 1 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem 12% ;
+}
+
+.about-us-section div.img{
+    flex: 1 1 20rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.about-us-section > h2,.skill-section > h2{
+    text-decoration:underline;
+    font-family: 'Abril Fatface';
+    margin: 2rem;
+    margin-left: 8vw;
+}
+.about-us-section div.img div{
+    width: 80%;
+    height: 80%;
+    border-radius: 25px;
+    transition: box-shadow 2s ease;
+    box-shadow: 2px 2px 0px 0px rgb(86,124,228);
+    -webkit-border-radius: 25px;
+    overflow: hidden;
+}
+
+
+.about-us-section div.img div:hover{
+    transition: box-shadow 0.5s ease-in-out;
+    box-shadow: 5px 5px rgba(86,124,228, 0.4), 10px 10px rgba(86,124,228, 0.3), 15px 15px rgba(86,124,228, 0.2), 20px 20px rgba(86,124,228, 0.1), 25px 25px rgba(86,124,228, 0.05);
+}
+
+
+
+.about-us-section div.img div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in;
+}
+
+.about-us-section div.img div img:hover{
+    transform: scale(1.05);
+    -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(60%);
+}
+
+
+
+
+.skill-section {
+    min-height: 50vh;
+    margin-top: 5rem;
+}
+.skill{
+    margin: 5rem 0;
+    display: flex;
+    min-height: 45vh;
+    flex-wrap: wrap;
+}
+.skill> h1{
+    flex: 1 1 20rem;
+    display: flex;
+    border-right: 1px solid ;
+    justify-content: center;
+    align-items: center;
+}
+.skill .skill-point{
+    margin: 0 10%;
+    padding: 1rem;
+}
+.skill .skill-point:nth-child(2){
+    padding: 3rem 1rem;
+}
+.skill .skill-content{
+    flex: 2 1 20rem;
+    display: flex;
+    flex-direction: column;
+}
+.skillbox {
+    background-color: white;
+    height: 0.1rem;
+    width: 0%;
+    transition: width 0.5s ease;
+    margin: 0 1rem;
+}
+.skill-icon{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.contact-text{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s ease-in-out;
+}
+
+.contact-text h1{
+    font-family: 'Abril Fatface';
+    transition: border-bottom 0.5s ease-in-out;
+}
+.contact-text .contact-line{
+    height: 1px;
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+    width: 0px;
+}
+
+.contact-text:hover >.contact-line{
+    width: 100px;
+}
+
+.contact-section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 1;
+    /* clip path */
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
+    width: 100vw;
+    color: black;
+    transition: clip-path 0.75s ease-in-out;
+
+}
+.contact-section a {
+    color: #000;
+}
+
+
+.contact-section i{
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform:scale(3);
+}
+
+
+.about-change button{
+    background-color: transparent;
+    border: 0;
+    padding: 0 0.5rem;
+} 
+.about-change button:nth-child(1){
+    border-right: 1px solid white ;
+    padding-right: 1rem;
+} 
+.about-change button:nth-child(2){
+    border-left: 1px solid white ;
+    padding-left: 1rem;
+} 
+.about-change {
+    display: flex;
+    margin-left: 8vw;
+    margin-top: 2rem;
+}
+
+.about{
+    transition: opacity 0.3s ease-in-out;
+    opacity:0;
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 797px) {
+    .icon {
+        text-align: center;
+    }
+    header{
+
+        justify-content: center;
+        align-items: center;
+    }
+  }
+
